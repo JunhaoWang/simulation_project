@@ -15,10 +15,10 @@ average = 20
 # amplitude of change for the speed of lead vehicle
 amplitude = 20
 
-# average speed of lead vehicle
+# average speed of side vehicle
 oaverage = 1000
 
-# amplitude of change for the speed of lead vehicle
+# amplitude of change for the speed of side vehicle
 oamplitude = 20
 
 #########################################################
