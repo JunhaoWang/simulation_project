@@ -4,14 +4,14 @@ This project helps 437 students to easily create custom scenarios for straight r
 
 ## usage
 
-### edit the simulation.py file by changing Parameters as specified in the file
+1. edit the simulation.py file by changing Parameters as specified in the file
 
-### run simulation.py by typing python simulation.py in the terminal
+2. run simulation.py by typing python simulation.py in the terminal
 
-### run openDS.jar as usual and use the HighTraffic.1 scenario, since this project is built upon existing HighTraffic.1 senario 
+3. run openDS.jar as usual and use the HighTraffic.1 scenario, since this project is built upon existing HighTraffic.1 senario 
 
 ## installation
 
-### install Python on computer
+1. install Python on computer
 
-### install packages: sudo pip install bs4, matplotlib
+2. install packages: sudo pip install bs4, matplotlib
