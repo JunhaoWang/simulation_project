@@ -7,7 +7,7 @@ import os
 ##################### Parameters #########################
 
 # lead vehicle only or not
-lead = True
+leadonly = False
 
 # average speed of lead vehicle
 average = 20
@@ -16,7 +16,7 @@ average = 20
 amplitude = 20
 
 # average speed of lead vehicle
-oaverage = 20
+oaverage = 1000
 
 # amplitude of change for the speed of lead vehicle
 oamplitude = 20
@@ -97,15 +97,19 @@ def genPoint(name, loc, speed, lead = True):
 	return soup.wayPoint
 
 
-def plotSpeed(x, y):
+def plotSpeed(x, y, lead = True):
 	"""
 	plot speed profile for lead vehicle
 	"""
 	plt.plot(x, y)
 	plt.xlabel('location')
 	plt.ylabel('speed')
-	plt.savefig('speed_profile.png')
-	plt.close()
+	if lead:
+		plt.savefig('speed_profile_lead.png')
+		plt.close()
+	else:
+		plt.savefig('speed_profile_side.png')
+		plt.close()
 
 def insertPoints(soup, points, lead = True):
 	"""
@@ -130,12 +134,13 @@ if __name__ == "__main__":
 	sinW = genMultiSin(average, amplitude)
 	osinW = genMultiSin(oaverage, oamplitude)
 
-	plotSpeed(range(6950),sinW)
+	plotSpeed(range(6950),sinW, True)
+	plotSpeed(range(6950),osinW, leadonly)
 
 	points = [genPoint(i, 6950 - i, sinW[i], True) for i in range(0,6950,20)]
 	soup = insertPoints(soup, points, True)
 
-	if lead:
+	if leadonly:
 		opoints = [genPoint(i, 6950 - i, 0, False) for i in range(0,6950,20)]
 		soup = insertPoints(soup, opoints, False)
 	else:
