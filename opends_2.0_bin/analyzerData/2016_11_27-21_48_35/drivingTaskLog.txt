@@ -1,4 +1,0 @@
-Driver: default driver
-Driving Task: highTraffic.xml
-Start Time: 2016-11-27 21:48:39.903
-

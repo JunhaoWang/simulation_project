@@ -10,13 +10,13 @@ import os
 leadonly = False
 
 # average speed of lead vehicle
-average = 20
+average = 60
 
 # amplitude of change for the speed of lead vehicle
-amplitude = 20
+amplitude = 10
 
 # average speed of side vehicle
-oaverage = 1000
+oaverage = 40
 
 # amplitude of change for the speed of side vehicle
 oamplitude = 20
